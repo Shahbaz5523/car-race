@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="race.css">
+</head> 
+<body>
+
+    <div class="main">
+
+        <img src="back.PNG" id="back">
+        <img src="myroad.jpg" id="road">
+
+        <div id="car">
+            <img src="body.png" alt="" id="carBody" />
+            <img src="wheel.png" id="left">
+            <img src="wheel.png" id="right">
+
+        </div>
+
+        <div id="car2">
+            <img src="car3.png" alt="" id="carBody" />
+            <img src="wheel.png" id="left">
+            <img src="wheel.png" id="right">
+        </div>
+
+        <div id="car3">
+            <img src="car4.png" alt="" id="carBody" />
+            <img src="wheel.png" id="left">
+            <img src="wheel.png" id="right">
+        </div>
+
+        <div id="car4">
+            <img src="my-car.png" alt="" id="carBody" />
+            <img src="wheel.png" id="left">
+            <img src="wheel.png" id="right">
+        </div>
+        <div id="select">
+            <button id="btn1" onclick="check1()">Select car1</button>
+            <button id="btn2" onclick="check2()">Select car2</button>
+            <button id="btn3" onclick="check3()">Select car3</button>
+            <button id="btn4" onclick="check4()">Select car4</button>
+        </div>
+        <div id="move">
+            <button onclick="left()">left</button>
+            <button onclick="up()">UP</button>
+            <button onclick="down()">Down</button>
+            <button onclick="right()">Right</button>
+            <button id="nitro" onclick="nitro()">Nitro</button>
+            <button id="change" onclick="change()">Change Car</button>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background:linear-gradient(#323232,#000);
+}
+
+.main {
+    width: 100%;
+    height: 400px;
+    background-color: yellow;
+}
+
+.main #back,
+.main #road {
+    width: 350%;
+    height: 200px;
+    display: block;
+}
+
+#back {
+    animation: road 12s linear 0s infinite;
+}
+
+#road {
+    position: relative;
+    animation: road 1s linear 0s infinite;
+    border-bottom: 20px solid;
+}
+
+#car {
+    position: absolute;
+    top: 240px;
+    width: 200px;
+    height: 90px;
+    left: 10px;
+    /* background-color: lawngreen;; */
+}
+
+#car2 {
+    position: absolute;
+    top: 190px;
+    width: 200px;
+    height: 90px;
+    left: 300px;
+    /* background-color: lawngreen; */
+}
+
+#car3 {
+    position: absolute;
+    top: 300px;
+    width: 200px;
+    height: 90px;
+    left: 200px;
+    /* background-color: lawngreen; */
+}
+
+#car4 {
+    position: absolute;
+    top: 250px;
+    width: 200px;
+    height: 90px;
+    left: 700px;
+    /* background-color: lawngreen; */
+}
+
+#car #carBody,
+#car2 #carBody,
+#car3 #carBody,
+#car4 #carBody {
+    width: 200px;
+}
+
+#car #left,
+#car2 #left,
+#car3 #left,
+#car4 #left {
+    position: absolute;
+    width: 28px;
+    left: 32px;
+    top: 45px;
+}
+
+#car #right,
+#car2 #right,
+#car3 #right,
+#car4 #right {
+    position: absolute;
+    width: 28px;
+    left: 145px;
+    top: 45px;
+}
+
+#left,
+#right {
+    animation: tire 0.5s linear 0s infinite;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 80px;
+    font-family: cursive;
+    font-size: large;
+    font-weight: bold;
+    background-color: black;
+    color: skyblue;
+    border: 5px solid skyblue;
+    border-radius:25px;
+    outline: none;
+    box-shadow: 1px 1px 3px black;
+}
+button:hover{
+    box-shadow: 1px 1px 10px white;
+}
+
+#move {
+    display: none;
+}
+
+#nitro{
+    width: 200px;
+}
+
+.nitro{
+    animation: car 55s linear 0s infinite;
+}
+
+/* animations */
+
+@keyframes car{
+    0%{
+        margin-left: 0px;
+    }
+    99%{
+        margin-left: 5000%;
+    }
+    100%{
+        display: none;
+    }
+}
+
+@keyframes road {
+    100% {
+        transform: translateX(-900px);
+    }
+}
+
+@keyframes tire {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Querry */
+
+@media screen and (max-width: 768px) {
+    #car4 {
+        left: 500px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    #car,
+    #car2,
+    #car3,
+    #car4 {
+        width: 100px;
+        height: 50px;
+    }
+
+    #car2 {
+        top: 200px;
+        left: 170px;
+    }
+
+    #car4 {
+        top: 300px;
+        left: 50px;
+    }
+
+    #car #carBody,
+    #car2 #carBody,
+    #car3 #carBody,
+    #car4 #carBody {
+        width: 100px;
+    }
+
+    #car #left,
+    #car2 #left,
+    #car3 #left,
+    #car4 #left {
+        position: absolute;
+        width: 16px;
+        left: 15px;
+        top: 22px;
+    }
+
+    #car #right,
+    #car2 #right,
+    #car3 #right,
+    #car4 #right {
+        position: absolute;
+        width: 16px;
+        left: 70px;
+        top: 20px;
+    }
+}
